@@ -1,0 +1,92 @@
+#pro{
+    margin-bottom: 1.5em;
+    margin-top: 2.5em;
+}
+
+#prohead1,
+#prohead2,
+#prohead3,
+#prohead4,
+#prohead5,
+#prohead6{
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    padding-top: 15px;
+}
+
+#prohead1{
+    color: #089ACF;
+}
+
+#prohead2{
+    color: #e71566;
+}
+
+#prohead3{
+    color: #44107a;
+}
+
+#prohead4{
+    color: #049992;
+}
+
+#prohead5{
+    color: #c000d1;
+}
+
+#prohead6{
+    color: #8400ff;
+}
+
+#prograph{
+    font-family: AvantGarde Md BT;
+    padding-top: 10px;
+    font-size: 17px;
+}
+
+.products{
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    margin-top: 5em;
+    overflow-x: visible;
+    margin-bottom: 12em;
+}
+
+.products .product-img{
+    text-align: center;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+
+.products img{
+    height: 8em;
+}
+
+.more-div{
+    padding-top: 70px;
+    text-align: center;
+    overflow-x: visible;
+}
+
+.more-div .product-btn{
+    color: #fff;
+    background-color: dodgerblue;
+    padding: 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    padding-right: 25px;
+    padding-left: 25px;
+    transition: 0.3s all ease;
+}
+
+.more-div .product-btn:hover{
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.product-btn i{
+    padding-left: 20px;
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+.about{
+    padding: 60px 60px;
+    margin-top: 4em;
+    align-items: center;
+    width: 100%;
+    overflow-x: visible;
+    text-align: center;
+}
+
+.about .image2 img{
+    height: 35em;
+    margin-top: 2em;
+    /* filter: drop-shadow(7px 10px 20px #000); */
+    overflow-x: visible;
+}
+
+.about .about-text{
+    text-align: center;
+    padding: 0 1em;
+    overflow-x: visible;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-text h3{
+    font-size: 2em;
+    padding-top: 30px;
+    font-family: "Patrick Hand", cursive;
+    letter-spacing: 3px;
+    overflow-x: visible;
+}
+
+.about .about-text h3 span{
+    color: rgb(14, 130, 108);
+    overflow-x: visible;
+}
+
+.about .about-text p{
+    font-size: 1.15em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: #757575;
+    overflow-x: visible;
+    max-width: 30em;
+}
+
+.about .about-text #s2{
+    font-family: Aharoni;
+    font-size: 45px;
+    overflow-x: visible;
+}
