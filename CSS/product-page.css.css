@@ -6,6 +6,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root{
+    --gradl: rgb(5, 66, 116);
+    --gradr: #00905b;
+    --lower_text: #dee4e2;
+    --upper_text: rgb(14, 130, 108);
+    --bg: #d4e8e5;
+    --btn: #25d366; 
+}
+
 .main{
     height: auto;
     width: 100%;
@@ -20,10 +29,8 @@
     border-radius: 0 2em 2em 0;
     height: 100%;
     position: fixed;
-    background: url('image/Background4.jpg');
-	background-size: 200% 200%;
-	animation: gradient 15s ease infinite;
     text-align: center;
+	background: linear-gradient(to right, var(--gradl), var(--gradr));
 }
 
 @keyframes gradient {
