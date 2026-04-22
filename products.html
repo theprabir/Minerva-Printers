@@ -2,154 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="..//image/Logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="shortcut icon" href="image/Logo.png" type="image/x-icon">
     <title>Products - Minerva Printers</title>
+    <link rel="stylesheet" href="product.css">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="CSS/product-page.css.css">
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="main">
-        <div class="container">
-            <div class="left">
-                <input type="text" id="searchProduct" placeholder="Search product">
-<br>
-<br>
-                <select id="sortOrder">
-                    <option value="">Sort by</option>
-                    <option value="lowest">Lowest Price</option>
-                    <option value="highest">Highest Price</option>
-                </select>
-<br>
-<br>
-                <div class="filters">
-                    <button data-category="all">All</button>
-                    <button data-category="Wedding Card">Wedding Invitation Cards</button>
-                    <button data-category="Invitation Card">Other Invitation Cards</button>
-                    <button data-category="ID Card">ID Cards</button>
-                    <button data-category="Election">Election</button>
-                    <button data-category="Business Cards">Business Cards</button>
-                    <button data-category="Calendars">Calendars</button>
-                    <button data-category="Magazines">Magazines</button>
-                    <button data-category="Banners">Banners</button>
-                    <button data-category="Others">Others</button>                
-                </div>
-            </div>
 
-            <div class="products">
-                <!-- Products will be dynamically inserted here -->
+    <!-- Sticky Navbar with Search -->
+    <nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="image/Logo.png" alt="Minerva Printers" class="logo-image">
+            <div class="logo-text">
+                <h1>MINERVA PRINTERS</h1>
+                <span class="tagline-small">Committed to keep commitment</span>
+            </div>
+        </div>
+        
+        <div class="nav-search">
+            <div class="search-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="globalSearch" class="nav-search-input" placeholder="Search for wedding invitations...">
+            </div>
+        </div>
+        
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Products Main Content -->
+    <div class="products-main">
+        <!-- Sidebar Filters -->
+        <div class="filters-sidebar">
+            <h3><i class="fas fa-filter"></i> Categories</h3>
+            
+            <div class="sort-box">
+                <select id="sortOrder">
+                    <option value="">Sort by: Default</option>
+                    <option value="lowest">Price: Low to High</option>
+                    <option value="highest">Price: High to Low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+            
+            <div class="category-list" id="categoryList">
+                <!-- Categories will be dynamically inserted -->
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Loading products...
             </div>
         </div>
     </div>
 
-    <!-- Script JS -->
-    <script>
-         const products = [
-    { imageURL: "image/Wedding/A.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/B.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/C.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/D.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/E.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/F.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/G.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/H.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/I.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/J.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/K.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/L.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/M.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/N.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/O.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/P.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/Q.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/R.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/S.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/T.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/U.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/v.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/X.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/Wedding/Y.png", name: "Wedding Invitation", category: "Wedding Card", price: 20 },
-    { imageURL: "image/visiting/1.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/2.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/3.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/4.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/5.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/6.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/7.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/8.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/9.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/10.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/11.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/12.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/13.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/14.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/15.jpg", name: "", category: "Business Card", price: 1 },
-    { imageURL: "image/visiting/16.jpg", name: "", category: "Business Card", price: 1 },
-    // { imageURL: "", name: "", category: "", price:  },
-];
+    <!-- Product Detail Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-close" id="modalClose">&times;</div>
+    <div class="modal-content">
+        <div class="modal-body" id="modalBody">
+            <!-- Dynamic content will be injected here -->
+        </div>
+    </div>
+</div>
 
-const productsContainer = document.querySelector('.products');
-const searchInput = document.getElementById('searchProduct');
-const sortOrderSelect = document.getElementById('sortOrder');
-const filterButtons = document.querySelectorAll('.filters button');
-
-function displayProducts(productsArray) {
-    productsContainer.innerHTML = "";
-    productsArray.forEach(product => {
-        const productElement = document.createElement('div');
-        productElement.classList.add('product');
-        productElement.innerHTML = `
-            <img src="${product.imageURL}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>Category: ${product.category}</p>
-            <p>Price: ₹${product.price}/pc</p>
-        `;
-        productsContainer.appendChild(productElement);
-    });
-}
-
-function filterProducts(category) {
-    let filteredProducts = products;
-    if (category !== 'all') {
-        filteredProducts = products.filter(product => product.category === category);
-    }
-    filteredProducts = searchProducts(filteredProducts);
-    filteredProducts = sortProducts(filteredProducts);
-    displayProducts(filteredProducts);
-}
-
-function searchProducts(productsArray) {
-    const searchText = searchInput.value.toLowerCase();
-    return productsArray.filter(product => product.name.toLowerCase().includes(searchText));
-}
-
-function sortProducts(productsArray) {
-    const sortOrder = sortOrderSelect.value;
-    if (sortOrder === 'lowest') {
-        return productsArray.sort((a, b) => a.price - b.price);
-    } else if (sortOrder === 'highest') {
-        return productsArray.sort((a, b) => b.price - a.price);
-    }
-    return productsArray;
-}
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        filterProducts(button.dataset.category);
-    });
-});
-
-searchInput.addEventListener('input', () => {
-    filterProducts(document.querySelector('.filters button.active')?.dataset.category || 'all');
-});
-
-sortOrderSelect.addEventListener('change', () => {
-    filterProducts(document.querySelector('.filters button.active')?.dataset.category || 'all');
-});
-
-displayProducts(products);
-    </script>
+<script src="product_page.js"></script>
 </body>
 </html>
