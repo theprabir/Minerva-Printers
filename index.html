@@ -565,11 +565,9 @@
         });
 
         // View All Products button
-        const viewAllBtn = document.getElementById('viewAllProductsBtn');
-        if (viewAllBtn) {
-            viewAllBtn.addEventListener('click', () => {
-                alert('Products page coming soon! 🚀');
-            });
+        document.getElementById('viewAllProductsBtn').addEventListener('click', function() {
+    window.open('https://minervaprinters.in/products');
+  });
         }
     </script>
 
