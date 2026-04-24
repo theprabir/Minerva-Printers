@@ -156,6 +156,341 @@
             description: "Standard business card for everyday professional use.",
             variants: []
         },
+        { 
+            imageURL: "image/Wedding/F.png", 
+            name: "Elegant Wedding Invitation - Gold", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and gold foil accents.",
+            variants: []  // Empty = no color variants
+        },
+        { 
+            imageURL: "image/Wedding/G.png", 
+            name: "Elegant Wedding Invitation - Rose Gold", 
+            category: "Wedding Card", 
+            price: 22,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and rose gold foil accents.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/H.png", 
+            name: "Royal Wedding Invitation - Red & Gold", 
+            category: "Wedding Card", 
+            price: 25,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/I.png", 
+            name: "Royal Wedding Invitation - Maroon & Gold", 
+            category: "Wedding Card", 
+            price: 28,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/J.png", 
+            name: "Classic Wedding Card - Cream", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 7,
+            packagingCost: 2,
+            gst: 18,
+            description: "Timeless classic wedding card design.",
+            variants: []
+        },
+        
+        // Business Cards - Each color appears as separate product
+        { 
+            imageURL: "image/visiting/6.jpg", 
+            name: "Premium Business Card - White", 
+            category: "Business Cards", 
+            price: 1,
+            printingCost: 0.5,
+            packagingCost: 0.2,
+            gst: 18,
+            description: "High-quality business card with premium matte finish.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/7.jpg", 
+            name: "Premium Business Card - Black", 
+            category: "Business Cards", 
+            price: 1.2,
+            printingCost: 0.5,
+            packagingCost: 0.2,
+            gst: 18,
+            description: "High-quality business card with premium matte finish.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/8.jpg", 
+            name: "Premium Business Card - Blue", 
+            category: "Business Cards", 
+            price: 1.1,
+            printingCost: 0.5,
+            packagingCost: 0.2,
+            gst: 18,
+            description: "High-quality business card with premium matte finish.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/9.jpg", 
+            name: "Standard Business Card - White", 
+            category: "Business Cards", 
+            price: 0.8,
+            printingCost: 0.4,
+            packagingCost: 0.15,
+            gst: 18,
+            description: "Standard business card for everyday professional use.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/10.jpg", 
+            name: "Standard Business Card - Cream", 
+            category: "Business Cards", 
+            price: 0.9,
+            printingCost: 0.4,
+            packagingCost: 0.15,
+            gst: 18,
+            description: "Standard business card for everyday professional use.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/K.png", 
+            name: "Elegant Wedding Invitation - Gold", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and gold foil accents.",
+            variants: []  // Empty = no color variants
+        },
+        { 
+            imageURL: "image/Wedding/L.png", 
+            name: "Elegant Wedding Invitation - Rose Gold", 
+            category: "Wedding Card", 
+            price: 22,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and rose gold foil accents.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/M.png", 
+            name: "Royal Wedding Invitation - Red & Gold", 
+            category: "Wedding Card", 
+            price: 25,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/N.png", 
+            name: "Royal Wedding Invitation - Maroon & Gold", 
+            category: "Wedding Card", 
+            price: 28,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/O.png", 
+            name: "Classic Wedding Card - Cream", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 7,
+            packagingCost: 2,
+            gst: 18,
+            description: "Timeless classic wedding card design.",
+            variants: []
+        },
+        
+        // Business Cards - Each color appears as separate product
+        { 
+            imageURL: "image/visiting/11.jpg", 
+            name: "Premium Business Card - White", 
+            category: "Business Cards", 
+            price: 1,
+            printingCost: 0.5,
+            packagingCost: 0.2,
+            gst: 18,
+            description: "High-quality business card with premium matte finish.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/12.jpg", 
+            name: "Premium Business Card - Black", 
+            category: "Business Cards", 
+            price: 1.2,
+            printingCost: 0.5,
+            packagingCost: 0.2,
+            gst: 18,
+            description: "High-quality business card with premium matte finish.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/13.jpg", 
+            name: "Premium Business Card - Blue", 
+            category: "Business Cards", 
+            price: 1.1,
+            printingCost: 0.5,
+            packagingCost: 0.2,
+            gst: 18,
+            description: "High-quality business card with premium matte finish.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/14.jpg", 
+            name: "Standard Business Card - White", 
+            category: "Business Cards", 
+            price: 0.8,
+            printingCost: 0.4,
+            packagingCost: 0.15,
+            gst: 18,
+            description: "Standard business card for everyday professional use.",
+            variants: []
+        },
+        { 
+            imageURL: "image/visiting/15.jpg", 
+            name: "Standard Business Card - Cream", 
+            category: "Business Cards", 
+            price: 0.9,
+            printingCost: 0.4,
+            packagingCost: 0.15,
+            gst: 18,
+            description: "Standard business card for everyday professional use.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/P.png", 
+            name: "Elegant Wedding Invitation - Gold", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and gold foil accents.",
+            variants: []  // Empty = no color variants
+        },
+        { 
+            imageURL: "image/Wedding/Q.png", 
+            name: "Elegant Wedding Invitation - Rose Gold", 
+            category: "Wedding Card", 
+            price: 22,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and rose gold foil accents.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/R.png", 
+            name: "Royal Wedding Invitation - Red & Gold", 
+            category: "Wedding Card", 
+            price: 25,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/S.png", 
+            name: "Royal Wedding Invitation - Maroon & Gold", 
+            category: "Wedding Card", 
+            price: 28,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/T.png", 
+            name: "Classic Wedding Card - Cream", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 7,
+            packagingCost: 2,
+            gst: 18,
+            description: "Timeless classic wedding card design.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/U.png", 
+            name: "Elegant Wedding Invitation - Gold", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and gold foil accents.",
+            variants: []  // Empty = no color variants
+        },
+        { 
+            imageURL: "image/Wedding/V.png", 
+            name: "Elegant Wedding Invitation - Rose Gold", 
+            category: "Wedding Card", 
+            price: 22,
+            printingCost: 8,
+            packagingCost: 2,
+            gst: 18,
+            description: "Premium quality wedding invitation with elegant floral design and rose gold foil accents.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/W.png", 
+            name: "Royal Wedding Invitation - Red & Gold", 
+            category: "Wedding Card", 
+            price: 25,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/X.png", 
+            name: "Royal Wedding Invitation - Maroon & Gold", 
+            category: "Wedding Card", 
+            price: 28,
+            printingCost: 10,
+            packagingCost: 3,
+            gst: 18,
+            description: "Royal themed wedding invitation with intricate patterns and premium paper.",
+            variants: []
+        },
+        { 
+            imageURL: "image/Wedding/Y.png", 
+            name: "Classic Wedding Card - Cream", 
+            category: "Wedding Card", 
+            price: 20,
+            printingCost: 7,
+            packagingCost: 2,
+            gst: 18,
+            description: "Timeless classic wedding card design.",
+            variants: []
+        },
+        
         
         // Example: Product WITH color variants (rare case)
         // { 
