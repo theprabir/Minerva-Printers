@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "wedding_gold_001",
+      "name": "Elegant Wedding Invitation - Gold",
+      "category": "Wedding Card",
+      "price": 20,
+      "printingCost": 8,
+      "packagingCost": 2,
+      "gst": 18,
+      "description": "Premium quality wedding invitation with elegant floral design and gold foil accents.",
+      "images": ["image/Wedding/A.png", "image/Wedding/A2.png", "image/Wedding/A3.png"],
+      "variants": []
+    },
+    {
+      "id": "wedding_rosegold_002",
+      "name": "Elegant Wedding Invitation - Rose Gold",
+      "category": "Wedding Card",
+      "price": 22,
+      "printingCost": 8,
+      "packagingCost": 2,
+      "gst": 18,
+      "description": "Premium quality wedding invitation with elegant floral design and rose gold foil accents.",
+      "images": ["image/Wedding/B.png"],
+      "variants": []
+    },
+    {
+      "id": "business_white_001",
+      "name": "Premium Business Card - White",
+      "category": "Business Cards",
+      "price": 1,
+      "printingCost": 0.5,
+      "packagingCost": 0.2,
+      "gst": 18,
+      "description": "High-quality business card with premium matte finish.",
+      "images": ["image/visiting/1.jpg", "image/visiting/1_back.jpg"],
+      "variants": []
+    },
+    {
+      "id": "business_black_002",
+      "name": "Premium Business Card - Black",
+      "category": "Business Cards",
+      "price": 1.2,
+      "printingCost": 0.5,
+      "packagingCost": 0.2,
+      "gst": 18,
+      "description": "High-quality business card with premium matte finish.",
+      "images": ["image/visiting/2.jpg"],
+      "variants": []
+    }
+  ]
+}
