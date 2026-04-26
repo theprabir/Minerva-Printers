@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Minerva Printers offers high-quality printing services in Bhadrak, Odisha including wedding cards, flex printing, banners, and offset printing. Affordable & fast delivery.">
-    <title>Minerva Printers | Best Printing Services in Bhadrak, Odisha | Wedding Cards, Offset Printing, Invitation cards, All types of printing services</title>
+    <title>Minerva Printers - Premium Printing Service Since 2000</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="image/Logo.png" type="image/x-icon">
 
@@ -49,13 +48,13 @@
                 <h1>Precision Printing, <span class="gradient-text">Modern Solutions</span></h1>
                 <p class="tagline">"Committed to keep commitment"</p>
                 <div class="hero-buttons">
-                    <button class="btn-outline"><i class="fas fa-play"></i> Explore Our Work</button>
+                    <a href="https://minervaprinters.in/products" class="btn-outline-link"><i class="fas fa-play"></i> Explore Our Products</a>
                 </div>
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <div class="stat-number">5000+</div>
-                    <div class="stat-label">Happy Clients</div>
+                    <div class="stat-number">1 Cr+</div>
+                    <div class="stat-label">Impressions Created</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">26</div>
@@ -347,35 +346,12 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Right Side - Contact Form -->
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label>Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" required placeholder="Eg. John Doe">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Phone Number <span class="required">*</span></label>
-                        <input type="tel" id="phone" required placeholder="Eg. +91 98765 43210">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" id="email" placeholder="Eg. johndoe@gmail.com">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Message <span class="required">*</span></label>
-                        <textarea id="message" required placeholder="Tell us about your printing needs..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit">
-                        <i class="fas fa-paper-plane"></i> Send Now
-                    </button>
-                </form>
-            </div>
+            <!-- Google Maps -->
+<div class="contact-form">
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.0960233182022!2d86.69332667424281!3d21.14857658365448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1c71344cecc3bd%3A0xfeb483ef6dcbdbb6!2sMinerva%20Printers!5e0!3m2!1sen!2sin!4v1777177192536!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
         </div>
     </div>
 </section>
@@ -444,6 +420,17 @@
         </div>
     </div>
 </footer>   
+
+<!-- Floating Contact Bar -->
+<div class="floating-contact" id="floatingContact">
+    <div class="floating-content">
+        <i class="fas fa-phone-alt"></i>
+        <span class="floating-number">+91 99373 11044</span>
+        <a href="tel:+919937311044" class="floating-call-btn">
+            <i class="fas fa-phone-volume"></i> <span>Call Now</span>
+        </a>
+    </div>
+</div>
 
 
     <!-- Three.js Library -->
@@ -612,5 +599,37 @@ if (mapsLink) {
     });
 }
     </script>
+
+
+<script>
+    // Floating contact bar - hide on scroll down, show on scroll up
+// Floating contact bar - hide when near footer
+const floatingBar = document.getElementById('floatingContact');
+
+function checkFooterProximity() {
+    const footer = document.querySelector('footer');
+    const floatingBar = document.getElementById('floatingContact');
+    
+    if (!footer || !floatingBar) return;
+    
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const barHeight = floatingBar.offsetHeight;
+    
+    // When footer is within 100px of viewport bottom, hide the bar
+    if (footerTop <= windowHeight + barHeight) {
+        floatingBar.classList.add('hide');
+    } else {
+        floatingBar.classList.remove('hide');
+    }
+}
+
+// Listen to scroll events
+window.addEventListener('scroll', checkFooterProximity);
+window.addEventListener('resize', checkFooterProximity);
+
+// Initial check
+checkFooterProximity();
+</script>
 </body>
 </html>
