@@ -40,6 +40,30 @@ body {
     flex-wrap: wrap;
 }
 
+.btn-outline-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    border: 2px solid #8b5cf6;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-outline-link:hover {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: #c084fc;
+    transform: translateY(-3px);
+    color: white;
+}
+
 /* Logo Styling - Professional Logotype */
 .logo {
     display: flex;
@@ -746,6 +770,7 @@ body {
 
 
 /* ========== CONTACT SECTION ========== */
+/* ========== CONTACT SECTION ========== */
 .contact {
     padding: 6rem 2rem;
     position: relative;
@@ -820,32 +845,21 @@ body {
     color: #94a3b8;
     line-height: 1.6;
     margin-bottom: 0.25rem;
+    word-break: break-word;
 }
 
 .info-details a {
     color: #94a3b8;
     text-decoration: none;
     transition: color 0.3s;
+    word-break: break-all;
 }
 
 .info-details a:hover {
     color: #c084fc;
 }
 
-.map-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    color: #c084fc !important;
-    font-weight: 500;
-}
-
-.map-link i {
-    font-size: 0.9rem;
-}
-
-/* Right Side - Contact Form */
+/* Right Side - Google Maps */
 .contact-form {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
@@ -854,71 +868,30 @@ body {
     border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #cbd5e1;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.form-group label .required {
-    color: #f87171;
-}
-
-.form-group input,
-.form-group textarea {
+.map-container {
     width: 100%;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    border-radius: 0.75rem;
-    color: #fff;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-family: 'Inter', sans-serif;
+    height: 100%;
+    min-height: 400px;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: #c084fc;
-    background: rgba(139, 92, 246, 0.1);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.btn-submit {
+.map-container iframe {
     width: 100%;
-    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
-    padding: 1rem;
+    height: 100%;
+    min-height: 400px;
     border: none;
-    border-radius: 0.75rem;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
-.btn-submit:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
-}
-
-/* Responsive */
+/* Responsive Contact Section */
 @media (max-width: 992px) {
     .contact-wrapper {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 1.5rem;
     }
 }
 
@@ -926,15 +899,73 @@ body {
     .contact {
         padding: 4rem 1rem;
     }
+    
     .contact-header h2 {
         font-size: 2rem;
     }
-    .contact-info,
-    .contact-form {
-        padding: 1.5rem;
+    
+    .contact-header p {
+        font-size: 0.9rem;
     }
+    
+    .contact-info, .contact-form {
+        padding: 1.2rem;
+    }
+    
     .info-item {
+        gap: 0.8rem;
         margin-bottom: 1.5rem;
+    }
+    
+    .info-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .info-details h3 {
+        font-size: 1rem;
+    }
+    
+    .info-details p, .info-details a {
+        font-size: 0.85rem;
+        word-break: break-word;
+    }
+    
+    .map-container {
+        min-height: 250px;
+    }
+    
+    .map-container iframe {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 3rem 0.8rem;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 1rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .info-details {
+        text-align: center;
+    }
+    
+    .map-container {
+        min-height: 200px;
+    }
+    
+    .map-container iframe {
+        min-height: 200px;
     }
 }
 
@@ -1152,5 +1183,185 @@ body {
     .developer {
         flex-direction: column;
         gap: 0.5rem;
+    }
+}
+
+
+/* ========== FLOATING CONTACT BAR ========== */
+/* ========== FLOATING CONTACT BAR ========== */
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+    backdrop-filter: blur(10px);
+    border-radius: 60px;
+    padding: 12px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.floating-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.floating-content i {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.floating-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.floating-call-btn {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 40px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.floating-call-btn:hover {
+    background: white;
+    color: #8b5cf6;
+    transform: scale(1.05);
+}
+
+/* Hide bar when near footer */
+.floating-contact.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Desktop Bounce Animation */
+@keyframes floatBounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+.floating-contact {
+    animation: floatBounce 2s ease-in-out infinite;
+}
+
+/* ========== RESPONSIVE FLOATING BAR ========== */
+/* Tablet */
+@media (max-width: 768px) {
+    .floating-contact {
+        padding: 10px 18px;
+        bottom: 15px;
+        width: 350px;
+        animation: none; /* Remove bounce on mobile for better UX */
+    }
+    
+    .floating-number {
+        font-size: 0.9rem;
+    }
+    
+    .floating-call-btn {
+        padding: 4px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .floating-content {
+        gap: 8px;
+    }
+}
+
+/* Mobile - Hide "Call Now" text, show only icon + number */
+@media (max-width: 550px) {
+    .floating-contact {
+        padding: 8px 16px;
+        width: 250px;
+        bottom: 12px;
+        border-radius: 50px;
+    }
+    
+    .floating-number {
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    /* Hide the "Call Now" text on small screens */
+    .floating-call-btn span {
+        display: none;
+    }
+    
+    /* Keep only the icon */
+    .floating-call-btn {
+        padding: 6px 10px;
+        background: rgba(255, 255, 255, 0.25);
+    }
+    
+    .floating-call-btn i {
+        margin: 0;
+        font-size: 1rem;
+    }
+    
+    .floating-content {
+        gap: 6px;
+    }
+}
+
+/* Very Small Devices - Show only icon + call icon */
+@media (max-width: 400px) {
+    .floating-contact {
+        padding: 6px 14px;
+        width: 200px;
+        border-radius: 40px;
+    }
+    
+    /* Hide the left phone icon */
+    .floating-content > i:first-child {
+        display: none;
+    }
+    
+    .floating-number {
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+    
+    /* Call button stays inline */
+    .floating-call-btn {
+        padding: 4px 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    .floating-call-btn span {
+        display: none; /* Show "Call Now" text briefly or keep hidden? */
+        font-size: 0.7rem;
+    }
+    
+    .floating-call-btn i {
+        font-size: 0.85rem;
+        margin: 0;
+    }
+    
+    .floating-content {
+        gap: 8px;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 }
