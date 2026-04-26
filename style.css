@@ -12,6 +12,10 @@ body {
     overflow-x: hidden;
 }
 
+a{
+    text-decoration: none;
+}
+
 /* ========== STICKY NAVBAR ========== */
 .navbar {
     position: sticky;
